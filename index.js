@@ -45,3 +45,34 @@ function square(number) {
 let number = 2;
 console.log(square(number));
 
+// MadLib Function//
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+    return result;
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("bird", "slow", "flew", "quietly"));
+
+// Arrays //
+
+var ourArray = [["the universe", 42], ["red", 3]];
+console.log(ourArray)
+
+var yourArray = [14, 25, 37];
+console.log(yourArray);
+yourArray[1] = 28;
+console.log(yourArray);
+
+var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]]
+
+var myData = [0][0];
+
+// Select the value 8
+myData = myArray[2][1];
+console.log(myData)
+console.log(myArray[2][1]);
+// Select the value 12
+console.log(myArray[3][0][2])
