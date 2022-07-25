@@ -159,7 +159,7 @@ function myLocalScope() {
 }
 myLocalScope();
 
-//console.log(myVar);// myVar is now outside the scope of the function
+// console.log(myVar);// myVar is now outside the scope of the function
 
 var outerWear = "T-Shirt";
 
@@ -170,3 +170,124 @@ function myOutFit() { // Local scope takes precedents over global scope
 }
 
 console.log(myOutFit());
+console.log(outerWear);
+
+// Return value from function with Return keyword //
+
+function minusSeven(num) {
+    return num - 7;
+}
+
+console.log(minusSeven(15));
+
+function timesFive(num) {
+    return num * 5;
+}
+
+console.log(timesFive(5));
+
+// Undefined value returned
+var sum = 0;
+function addThree() {
+    sum = sum + 3;
+}
+
+function addFive() {
+    sum += 5;
+}
+
+console.log(addFive());
+
+//Assignment with a returned value
+
+var changed = 0;
+console.log(changed);
+
+function change(num) {
+    return (num + 5) / 3;
+}
+
+changed = change(10);
+console.log(changed);
+
+// Stand in Line //
+
+function nextInLine(arr, item) {
+
+    arr.push(item);
+    return arr.shift();
+}
+
+var testArr = [1, 2, 3, 4, 5];
+
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+// Booleans //
+
+function welcomeToBooleans() {
+    return true;
+}
+console.log(welcomeToBooleans());
+
+// If Statements //
+
+function ourTrueOrFalse() {
+    if (isItTrue) {
+        return "Yes, its true";
+    }
+    return "No, its false";
+}
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+console.log(trueOrFalse(true));
+
+// Equality Operators //
+
+function testEqual(val) {
+    if (val == 12) {
+        //return "Equal";
+        console.log("Equal")
+    } else
+    //return "Not equal";
+    console.log("Not equal")
+}
+//console.log(testEqual(10));
+testEqual(12);
+
+// Strict Equality Operator
+
+function testStrict(val) {
+    if (val === 7) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+console.log(testStrict("7"));
+console.log(testStrict(7));
+
+// Inequality Operator
+
+function testNotEqual(val) {
+    if (val != 99) {
+        return "Inequality operator says Not Equal";
+    }
+    return "Inequality operator says Equal";
+}
+console.log(testNotEqual(10))
+
+// Strict Inequality Operator
+
+function testStrictNotEqual(val) {
+    if (val !== 10) {
+        return "Not Equal";
+    }
+    return "Equal";
+}
+console.log(testStrictNotEqual(10));
