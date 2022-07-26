@@ -333,3 +333,65 @@ function testLogicalOr(val) {
     return "Inside";
 }
 console.log(testLogicalOr(17));
+
+// Else Statements //
+
+function testElse(val) {
+    var result = "";
+    if (val < 5) {
+        result = "Bigger than 5";
+    } else {
+        result = "Smaller than or equal to 5";
+    }
+    return result;
+}
+console.log(testElse(6));
+
+//Else if
+function testElseIf(val) {
+    if (val > 10) {
+        return "Greater than 10";
+    } else if (val < 5) {
+        return "Less than 5";
+    } else {
+        return "Between 5 and 10";
+    }
+}
+console.log(testElseIf(8));
+
+function testChainedIfElse(val) {
+    if (val < 5) {
+        return "Tiny";
+    } else if (val < 10) {
+        return "Small";
+    } else if (val < 15) {
+        return "Medium";
+    } else if (val < 20) {
+        return "Large";
+    } else {
+        return "Huge";
+    }
+}
+console.log(testChainedIfElse(21));
+
+// --- Golf Code --- //
+
+var names = ["Hole-In-One!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Very Not Good!"]
+function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0];
+    } else if (strokes <= par - 2) {
+        return names[1];
+    } else if (strokes == par - 1) {
+        return names[2];
+    } else if (strokes == par) {
+        return names[3];
+    } else if (strokes == par + 1) {
+        return names[4];
+    } else if (strokes == par + 2) {
+        return names[5];
+    } else if (strokes == par + 3) {
+        return names[6];
+    }
+}
+console.log(golfScore(5, 8));
