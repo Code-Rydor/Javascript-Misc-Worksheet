@@ -291,3 +291,45 @@ function testStrictNotEqual(val) {
     return "Equal";
 }
 console.log(testStrictNotEqual(10));
+
+// Greater Than
+function testGreaterOrEqual(val) {
+    if (val >= 20) {
+        return "20 or over";
+    }
+    if (val >= 10) {
+        return "10 or over";
+    }
+    return "Less than 10";
+}
+
+console.log(testGreaterOrEqual(10));
+
+// Less Than
+function testLessOrEqual(val) {
+    if (val <= 12) {
+        return "12 or less";
+    }
+    if (val <= 20) {
+        return "24 or less";
+    }
+    return "More than 24";
+}
+console.log(testLessOrEqual(16));
+
+// And Or Operators
+function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25) {
+        return "Yes";
+    }
+    return "No";
+}
+console.log(testLogicalAnd(30));
+
+function testLogicalOr(val) {
+    if (val < 10 || val > 20) {
+        return "Outside";
+    }
+    return "Inside";
+}
+console.log(testLogicalOr(17));
