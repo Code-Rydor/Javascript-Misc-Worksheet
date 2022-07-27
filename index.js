@@ -565,4 +565,171 @@ var testObj2 = {
 };
 
 var playerNumber = 19;
-console.log(testObj2[playerNumber]);
+var player = testObj2[playerNumber]
+console.log(player);
+
+// Update object properties
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+ourDog.name = "Happy Camper"
+console.log(ourDog.name);
+
+var myDog = {
+    "name": "Tex",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["DevCodeCamp Campers"]
+};
+myDog.name = "Happy Coder"
+console.log(myDog.name);
+
+// Add object property
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+ourDog.bark = "Bow wow"
+console.log(ourDog.bark);
+
+var myDog = {
+    "name": "Tex",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["DevCodeCamp Campers"]
+};
+myDog['bark'] = "Woof"
+console.log(myDog['bark']);
+
+// Delete property
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"],
+    "bark": "Bow wow"
+};
+delete ourDog.bark;
+console.log(ourDog);
+
+// Objects for lookups
+function phoneticLookup(val) {
+
+    var lookup = {
+        alpha: "Adams",
+        bravo: "Boston",
+        charlie: "Chicago",
+        delta: "Denver",
+        echo: "Easy",
+        foxtrot: "Frank"
+    };
+    result = lookup[val];
+    return result;
+}
+console.log(phoneticLookup("echo"));
+
+// Testing Object For Properties
+
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp];
+    } else {
+        return "Not Found"
+    }
+}
+console.log(checkObj("pet"));
+
+// Manipulating Complex Objects
+var myMusic = [
+    {
+        artist: "Billy Joel",
+        title: "Piano Man",
+        release_year: 1973,
+        formats: [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        gold: true
+    },
+    {
+        artist: "Beau Carnes",
+        title: "Cereal Man",
+        release_year: 2003,
+        formats: [
+            "YouTube Video",
+        ]
+    }
+];
+console.log(myMusic[0].artist)
+
+// Nested Objects
+var myStorage = {
+    car: {
+        inside: {
+            gloveBox: "maps",
+            passengerSeat: "crumbs"
+        },
+        outside: {
+            trunk: "jack"
+        }
+    }
+};
+var gloveBoxContents = myStorage.car.inside.gloveBox;
+console.log(gloveBoxContents);
+
+// Record Collection - Coding Challenge //
+
+var collection = {
+    "2548": {
+        "album": "Slippery When Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let It Rock",
+            "You Give Love A Bad Name"
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439": {
+        "album": "ABBA Gold"
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+    if (value === "") {
+        delete collection[id][prop];
+    } else if (prop === "tracks") {
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+
+    return collection;
+}
+console.log(updateRecords(5439, "artist", "ABBA"));
