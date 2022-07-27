@@ -395,3 +395,174 @@ function golfScore(par, strokes) {
     }
 }
 console.log(golfScore(5, 8));
+
+// Switch Statements //
+
+function caseInSwitch(val) {
+    var answer = "";
+    switch (val) {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+    }
+    return answer;
+}
+console.log(caseInSwitch(2));
+
+// Default Answer
+function switchOfStuff(val) {
+    var answer = "";
+    switch (val) {
+        case "a":
+            answer = "apple";
+            break;
+        case "b":
+            answer = "bird";
+            break;
+        case "c":
+            answer = "cat";
+            break;
+        default:
+            answer = "stuff";
+            break;
+    }
+    return answer;
+}
+console.log(switchOfStuff(2));
+
+function sequentialSizes(val) {
+    var answer = "";
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High";
+            break;
+    }
+    return answer;
+}
+console.log(sequentialSizes(8));
+
+//Returning Booleans Values//
+
+function isLess(a, b) {
+    return a < b;
+    // if (a < b) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+}
+console.log(isLess(20, 15));
+
+// Return Early Pattern For Functions //
+
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined;
+    }
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+console.log(abTest(-2, 2));
+
+// Counting Cards //
+
+var count = 0;
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+    }
+
+    var holdbet = "Hold"
+    if (count > 0) {
+        holdbet = "Bet"
+    }
+    return count + " " + holdbet;
+        
+
+}
+cc(2); cc("K"); cc(10); cc('K'); cc('A');
+console.log(cc(4));
+
+// Build Javascript Objects //
+
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+
+var myDog = {
+    "name": "Tex",
+    "legs": 3,
+    "tails": 2,
+    "friends": []
+};
+
+// Object Properties - Dot Notation //
+
+var testObj = {
+    "hat": "ballcap", // Quotes around object property?
+    shirt: "jersey",
+    shoes: "cleats"
+};
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+console.log(hatValue);
+console.log(shirtValue);
+
+// Bracket notation (is required when accessing object property that has a space in the name)
+var testObj1 = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
+var entreeValue = testObj1["an entree"];
+var drinkValue = testObj1['the drink'];
+
+console.log(entreeValue);
+console.log(drinkValue);
+
+// Bracket notation using variables
+var testObj2 = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+
+var playerNumber = 19;
+console.log(testObj2[playerNumber]);
