@@ -5,27 +5,28 @@ let person = {
 };
 
 console.log(person)
-// Dot notation
+
+//? Dot notation
 
 person.name = 'Harry';
 person.age = 29;
 
 console.log(person)
 
-// Bracket Notation
+//? Bracket Notation
 let selection = 'name';
 
 person[selection] = 'Mary';
 
 console.log(person)
 
-// Arrays //
+//? Arrays //
 
 let selectedColors = ['red', 'blue', 'green']
 selectedColors[2] = 1;
 console.log(selectedColors.length);
 
-// Functions //
+//? Functions //
 
 function greet() {
     console.log(`Hello ${person.name}!`)
@@ -45,7 +46,7 @@ function square(number) {
 let number = 2;
 console.log(square(number));
 
-// MadLib Function//
+//? MadLib Function//
 
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
     var result = "";
@@ -56,7 +57,7 @@ function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
 console.log(wordBlanks("dog", "big", "ran", "quickly"));
 console.log(wordBlanks("bird", "slow", "flew", "quietly"));
 
-// Arrays //
+//? Arrays //
 
 var ourArray = [["the universe", 42], ["red", 3]];
 console.log(ourArray)
@@ -70,43 +71,43 @@ var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]]
 
 var myData = [0][0];
 
-// Select the value 8
+//? Select the value 8
 myData = myArray[2][1];
 console.log(myData)
 console.log(myArray[2][1]);
-// Select the value 12
+//? Select the value 12
 console.log(myArray[3][0][2])
 
-// Push adds to array
+//? Push adds to array
 var pushArray = ["Landin", "Jay", 23];
 pushArray.push(["Garrett", 23]);
 
 console.log(pushArray)
 
-// Pop removes last element in array
+//? Pop removes last element in array
 myArray = [1, 2, 3];
 console.log(myArray);
 var removeFromArray = myArray.pop()
 console.log(myArray)
 console.log(removeFromArray)
 
-// Shift removes first element in array
+//? Shift removes first element in array
 myArray = ["Garrett", 2, 3, "Landin"];
 console.log(myArray);
 removeFromArray = myArray.shift();
 console.log(myArray);
 console.log(removeFromArray);
 
-//Unshift adds element to beginning of array
+//? Unshift adds element to beginning of array
 myArray = ["Garrett", "Bryce", "Landin"];
 console.log(myArray);
 addToBeginningOfArray = myArray.unshift("My wife loves");
 console.log(myArray);
 
-//Shopping List (Nested Arrays)
+//? Shopping List (Nested Arrays)
 var myList = [["Cereal, 2"], ["Milk", 1], ["Juice", 3], ["Bacon, 10"], ["Eggs", 12]];
 
-// Functions //
+//? Functions //
 
 function greeting() {
     console.log("Hello! How are you?");
@@ -129,9 +130,9 @@ function myFunctionWithArgs(a, b) {
 }
 myFunctionWithArgs(10, 5);
 
-// Scope //
+//? Scope //
 
-// Global Scope
+//? Global Scope
 var myGlobal = 10;
 
 function fun1() {
@@ -152,7 +153,7 @@ function fun2() {
 fun1();
 fun2();
 
-// Local Scope
+//? Local Scope
 function myLocalScope() {
     var myVar = 5;
     console.log(myVar);
@@ -172,7 +173,7 @@ function myOutFit() { // Local scope takes precedents over global scope
 console.log(myOutFit());
 console.log(outerWear);
 
-// Return value from function with Return keyword //
+//? Return value from function with Return keyword //
 
 function minusSeven(num) {
     return num - 7;
@@ -186,7 +187,7 @@ function timesFive(num) {
 
 console.log(timesFive(5));
 
-// Undefined value returned
+//? Undefined value returned
 var sum = 0;
 function addThree() {
     sum = sum + 3;
@@ -198,7 +199,7 @@ function addFive() {
 
 console.log(addFive());
 
-//Assignment with a returned value
+//? Assignment with a returned value
 
 var changed = 0;
 console.log(changed);
@@ -210,7 +211,7 @@ function change(num) {
 changed = change(10);
 console.log(changed);
 
-// Stand in Line //
+//? Stand in Line //
 
 function nextInLine(arr, item) {
 
@@ -224,14 +225,14 @@ console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
 
-// Booleans //
+//? Booleans //
 
 function welcomeToBooleans() {
     return true;
 }
 console.log(welcomeToBooleans());
 
-// If Statements //
+//? If Statements //
 
 function ourTrueOrFalse() {
     if (isItTrue) {
@@ -248,7 +249,7 @@ function trueOrFalse(wasThatTrue) {
 }
 console.log(trueOrFalse(true));
 
-// Equality Operators //
+//? Equality Operators //
 
 function testEqual(val) {
     if (val == 12) {
@@ -261,7 +262,7 @@ function testEqual(val) {
 //console.log(testEqual(10));
 testEqual(12);
 
-// Strict Equality Operator
+//? Strict Equality Operator
 
 function testStrict(val) {
     if (val === 7) {
@@ -272,7 +273,7 @@ function testStrict(val) {
 console.log(testStrict("7"));
 console.log(testStrict(7));
 
-// Inequality Operator
+//? Inequality Operator
 
 function testNotEqual(val) {
     if (val != 99) {
@@ -282,7 +283,7 @@ function testNotEqual(val) {
 }
 console.log(testNotEqual(10))
 
-// Strict Inequality Operator
+//? Strict Inequality Operator
 
 function testStrictNotEqual(val) {
     if (val !== 10) {
@@ -292,7 +293,7 @@ function testStrictNotEqual(val) {
 }
 console.log(testStrictNotEqual(10));
 
-// Greater Than
+//? Greater Than
 function testGreaterOrEqual(val) {
     if (val >= 20) {
         return "20 or over";
@@ -305,7 +306,7 @@ function testGreaterOrEqual(val) {
 
 console.log(testGreaterOrEqual(10));
 
-// Less Than
+//? Less Than
 function testLessOrEqual(val) {
     if (val <= 12) {
         return "12 or less";
@@ -317,7 +318,7 @@ function testLessOrEqual(val) {
 }
 console.log(testLessOrEqual(16));
 
-// And Or Operators
+//? And Or Operators
 function testLogicalAnd(val) {
     if (val <= 50 && val >= 25) {
         return "Yes";
@@ -334,7 +335,7 @@ function testLogicalOr(val) {
 }
 console.log(testLogicalOr(17));
 
-// Else Statements //
+//? Else Statements //
 
 function testElse(val) {
     var result = "";
@@ -347,7 +348,7 @@ function testElse(val) {
 }
 console.log(testElse(6));
 
-//Else if
+//? Else if
 function testElseIf(val) {
     if (val > 10) {
         return "Greater than 10";
@@ -374,7 +375,7 @@ function testChainedIfElse(val) {
 }
 console.log(testChainedIfElse(21));
 
-// --- Golf Code --- //
+//? --- Golf Code --- //
 
 var names = ["Hole-In-One!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Very Not Good!"]
 function golfScore(par, strokes) {
@@ -396,7 +397,7 @@ function golfScore(par, strokes) {
 }
 console.log(golfScore(5, 8));
 
-// Switch Statements //
+//? Switch Statements //
 
 function caseInSwitch(val) {
     var answer = "";
@@ -418,7 +419,7 @@ function caseInSwitch(val) {
 }
 console.log(caseInSwitch(2));
 
-// Default Answer
+//? Default Answer
 function switchOfStuff(val) {
     var answer = "";
     switch (val) {
@@ -462,7 +463,7 @@ function sequentialSizes(val) {
 }
 console.log(sequentialSizes(8));
 
-//Returning Booleans Values//
+//? Returning Booleans Values//
 
 function isLess(a, b) {
     return a < b;
@@ -474,7 +475,7 @@ function isLess(a, b) {
 }
 console.log(isLess(20, 15));
 
-// Return Early Pattern For Functions //
+//? Return Early Pattern For Functions //
 
 function abTest(a, b) {
     if (a < 0 || b < 0) {
@@ -482,9 +483,9 @@ function abTest(a, b) {
     }
     return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
-console.log(abTest(-2, 2));
+console.log(abTest(4, 2));
 
-// Counting Cards //
+//? Counting Cards //
 
 var count = 0;
 function cc(card) {
@@ -516,7 +517,7 @@ function cc(card) {
 cc(2); cc("K"); cc(10); cc('K'); cc('A');
 console.log(cc(4));
 
-// Build Javascript Objects //
+//? Build Javascript Objects //
 
 var ourDog = {
     "name": "Camper",
@@ -532,7 +533,7 @@ var myDog = {
     "friends": []
 };
 
-// Object Properties - Dot Notation //
+//? Object Properties - Dot Notation //
 
 var testObj = {
     "hat": "ballcap", // Quotes around object property?
@@ -545,7 +546,7 @@ var shirtValue = testObj.shirt;
 console.log(hatValue);
 console.log(shirtValue);
 
-// Bracket notation (is required when accessing object property that has a space in the name)
+//? Bracket notation (is required when accessing object property that has a space in the name)
 var testObj1 = {
     "an entree": "hamburger",
     "my side": "veggies",
@@ -557,7 +558,7 @@ var drinkValue = testObj1['the drink'];
 console.log(entreeValue);
 console.log(drinkValue);
 
-// Bracket notation using variables
+//? Bracket notation using variables
 var testObj2 = {
     12: "Namath",
     16: "Montana",
@@ -568,7 +569,7 @@ var playerNumber = 19;
 var player = testObj2[playerNumber]
 console.log(player);
 
-// Update object properties
+//? Update object properties
 var ourDog = {
     "name": "Camper",
     "legs": 4,
@@ -587,7 +588,7 @@ var myDog = {
 myDog.name = "Happy Coder"
 console.log(myDog.name);
 
-// Add object property
+//? Add object property
 var ourDog = {
     "name": "Camper",
     "legs": 4,
@@ -606,7 +607,7 @@ var myDog = {
 myDog['bark'] = "Woof"
 console.log(myDog['bark']);
 
-// Delete property
+//? Delete property
 var ourDog = {
     "name": "Camper",
     "legs": 4,
@@ -617,7 +618,7 @@ var ourDog = {
 delete ourDog.bark;
 console.log(ourDog);
 
-// Objects for lookups
+//? Objects for lookups
 function phoneticLookup(val) {
 
     var lookup = {
@@ -633,7 +634,7 @@ function phoneticLookup(val) {
 }
 console.log(phoneticLookup("echo"));
 
-// Testing Object For Properties
+//? Testing Object For Properties
 
 var myObj = {
     gift: "pony",
@@ -650,7 +651,7 @@ function checkObj(checkProp) {
 }
 console.log(checkObj("pet"));
 
-// Manipulating Complex Objects
+//? Manipulating Complex Objects
 var myMusic = [
     {
         artist: "Billy Joel",
@@ -674,7 +675,7 @@ var myMusic = [
 ];
 console.log(myMusic[0].artist)
 
-// Nested Objects
+//? Nested Objects
 var myStorage = {
     car: {
         inside: {
@@ -733,3 +734,175 @@ function updateRecords(id, prop, value) {
     return collection;
 }
 console.log(updateRecords(5439, "artist", "ABBA"));
+
+//? WHILE LOOPS //
+
+var myArray1 = [];
+
+var i = 0
+while (i < 5) {
+    myArray1.push(i);
+    i++;
+}
+
+console.log(myArray1);
+
+//? FOR LOOPS //
+
+var ourArray1 = [];
+
+for (var i = 0; i < 5; i++) {
+    ourArray1.push(i);
+}
+
+var myArray2 = [];
+
+for (var i = 1; i < 6; i++){
+    myArray2.push(i);
+}
+console.log(myArray2);
+
+//? Odd numbers with a For Loop
+var ourArray2 = [];
+
+for (var i = 0; i < 10; i += 2){
+    ourArray2.push(i);
+}
+console.log(ourArray2);
+
+var myArray3 = [];
+
+for (var i = 1; i < 10; i += 2){
+    myArray3.push(i);
+}
+console.log(myArray3);
+
+//? Count backwards with For Loops
+
+var ourArray3 = [];
+
+for (var i = 10; i > 0; i -= 2) {
+    ourArray3.push(i);
+}
+console.log(ourArray3);
+
+var myArray4 = [];
+
+for (var i = 10; i > 0; i--){
+    myArray4.push(i);
+}
+console.log(myArray4);
+
+//? Iterate through an Array with a For Loop //
+
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+    ourTotal += ourArr[i];
+}
+console.log(ourTotal);
+
+var myArr = [2, 3, 4, 5, 6];
+var myTotal = 0;
+
+for (var i = 0; i < myArr.length; i++) {
+    myTotal += myArr[i];
+}
+console.log(myTotal);
+
+//? Nested For Loops //
+
+function multiplyAll(arr) {
+    var product = 1;
+
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+
+    return product;
+}
+
+var product = multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+console.log(product); // 5040
+
+//? *** DO-WHILE LOOPS *** //
+
+var myArray5 = []; // While loops first check the condition before it runs any code with the loop
+var i = 10;        // Do-While loops always runs the code at least one time before it checks the condition
+
+//! WHILE LOOP //
+// while (i < 5) {
+//     myArray5.push(i);
+//     i++;
+// }
+
+//! DO-WHILE LOOP //
+ do {
+    myArray5.push(i); // Code to execute
+    i++;
+    } while (i < 5) // Condition
+
+console.log(i, myArray5);
+
+//? Profile Lookup Coding Challenge //
+
+var contacts = [
+    {
+        firstName: "Akira",
+        lastName: "Laine",
+        number: "0543236543",
+        likes: ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "0994372684",
+        likes: ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0487345643",
+        likes: ["Intriguing Cases", "Violin"]
+    },
+    {
+        firstName: "Kristian",
+        lastName: "Vos",
+        number: "unkown",
+        likes: ["Javascript", "Gaming", "Foxes"]
+    }
+];
+
+function lookUpProfile(name, prop) {
+    for (var i = 0; i < contacts.length; i++){
+        if (contacts[i].firstName === name) {
+            return contacts[i][prop] || "No Such Property";
+        }
+    }
+    return "No such contact";
+};
+
+var data = lookUpProfile("Sherlock", "hello");
+
+console.log(data);
+
+//? Random Fractions and Whole Numbers //
+
+function randomFraction() { 
+
+    return Math.random();// Math.random will generate a random decimal number, cannot be 1 but can be 0
+};
+console.log(randomFraction());
+
+var randomNumberBetween0And19 = Math.floor(Math.random() * 20); 
+
+function randomWholeNum() {
+
+
+    return Math.floor(Math.random() * 10);// Math.floor will round DOWN to nearest whole number
+}
+console.log(randomWholeNum());
