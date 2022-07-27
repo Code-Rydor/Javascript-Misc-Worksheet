@@ -894,7 +894,7 @@ console.log(data);
 
 function randomFraction() { 
 
-    return Math.random();// Math.random will generate a random decimal number, cannot be 1 but can be 0
+    return Math.random();// Math.random will generate a random decimal number 0-1, cannot be 1 but can be 0
 };
 console.log(randomFraction());
 
@@ -906,3 +906,52 @@ function randomWholeNum() {
     return Math.floor(Math.random() * 10);// Math.floor will round DOWN to nearest whole number
 }
 console.log(randomWholeNum());
+
+//? Random Whole Numbers Within A Range //
+
+function ourRandomRange(ourMin, ourMax) {
+
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+console.log(ourRandomRange(1, 9));
+
+function randomRange(myMin, myMax) {
+
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+var myRandom = randomRange(5, 15);
+console.log(myRandom);
+
+//? Use the parseInt Function //
+
+function convertToInteger(str) {
+    return parseInt(str);        // Turn a string number into an integer
+}
+
+console.log(convertToInteger("236"));
+
+//? Use the parseInt Function with a Radix //
+
+function convertToInteger1(str) { // I need more understanding of what Radix is
+    return parseInt(str, 2);
+}
+
+console.log(convertToInteger1("10011"));
+
+//? Use the Conditional (Ternary) Operator
+
+function checkEqual(a, b) {
+
+    return a === b ? true : false;
+    
+    // above is same as return a===b;
+
+    // if (a === b) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+}
+console.log(checkEqual(1, 2));
