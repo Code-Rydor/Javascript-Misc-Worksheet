@@ -955,3 +955,107 @@ function checkEqual(a, b) {
     // }
 }
 console.log(checkEqual(1, 2));
+
+//? Multiple Ternary Operators //
+
+function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+} // Checks if (num > 0) is true, if true it returns "positive". If its false it moves to other side of colon and checks that.
+//  If other side of colon is true, it returns "negative". If its false, it returns "zero".
+console.log(checkSign(0));
+
+//? ---- VAR vs LET ---- ?//
+
+let catName = "Quincy"; // Cannot use let and declare the same variable twice
+let quote;             // Can use var to declare variable twice
+
+//let catName = "Beau"; // This throws an error, must remove let and just rename the variable
+
+function catTalk() {
+    "use strict";
+
+    catName = "Oliver";
+    quote = catName + " says Meow!";
+}
+catTalk();
+
+//? Compare Scopes of the var and let Keywords //
+
+function checkScope() {
+"use strict";
+    var i = "function scope"; // Change between let and var
+    if (true) {
+        let i = "block scope"; // Change between let and var
+        console.log("Block scope i is: ", i);
+    }
+    console.log("Function scope i is: ", i);
+    return i;
+}
+checkScope();
+
+//? Declare a Read-Only Variable with the const Keyword //
+
+function printManyTimes(str) {
+    "use strict";
+    const SENTENCE = str + " is cool!"; // Some people make const variables all capital as reminder its a const
+
+    for (let i = 0; i < str.length; i += 2){ // Should primarily be using const and let instead of var, there are exceptions though
+        console.log(SENTENCE);
+    }
+}
+printManyTimes("DevCodeCamp");
+
+//? Mutate an Array Declared with const //
+
+const s = [5, 7, 2];
+function editInPlace() {
+    "use strict";
+
+    // s = [2, 5, 7]; // Doesnt work because its a const variable
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+}
+editInPlace();
+console.log(s);
+
+//? Prevent Object Mutation //
+
+function freezeObject() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+
+    Object.freeze(MATH_CONSTANTS); // Use this when you dont want anything on the object to change
+
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch (ex) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+const PI = freezeObject();
+console.log(PI);
+
+//? Use Arrow Functions To Write Concise Anonymous Functions // ------------------------------
+
+var magic = function () { // Anonymous function
+    return new Date();
+};
+// Shorter way to write it
+var magic = () => {
+    return new Date();
+};
+// Even Shorter way to write it
+var magic = () => new Date(); // But change it const
+
+//? Write Arrow Functions with Parameters // ----------------------------
+
+// var myConcat = function (arr1, arr2) {
+//     return arr1.concat(arr2);
+// };
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+console.log(myConcat([1, 2], [3, 4, 5]));
