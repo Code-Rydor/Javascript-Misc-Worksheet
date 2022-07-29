@@ -1097,3 +1097,4 @@ const sum1 = (function() {
     };
 })();
 console.log(sum1(1, 2, 3));
+//
