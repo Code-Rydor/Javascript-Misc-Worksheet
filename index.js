@@ -959,7 +959,7 @@ console.log(checkEqual(1, 2));
 //? Multiple Ternary Operators //
 
 function checkSign(num) {
-    return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero"; // The ? is the ternary operator
 } // Checks if (num > 0) is true, if true it returns "positive". If its false it moves to other side of colon and checks that.
 //  If other side of colon is true, it returns "negative". If its false, it returns "zero".
 console.log(checkSign(0));
@@ -1097,4 +1097,3 @@ const sum1 = (function() {
     };
 })();
 console.log(sum1(1, 2, 3));
-//
